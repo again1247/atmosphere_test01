@@ -1,0 +1,104 @@
+    1  cd atmosphere/
+    2  ll
+    3  cd roles/
+    4  ll
+    5  cat defaults/
+    6  cd defaults/
+    7  ll
+    8  cd meta/
+    9  ll
+   10  cat main.yml 
+   11  cd ~
+   12  cd atmosphere/roles/defaults
+   13  ll
+   14  cd defaults/
+   15  ll
+   16  cat main.yml 
+   17  cd ~
+   18  cd atmosphere/
+   19  sudo poetry install --with dev
+   20  sudo pip install poetry
+   21  sudo poetry install --with dev
+   22  ubuntu@h-vm-big10:~/atmosphere$ sudo poetry install --with dev
+   23  Creating virtualenv atmosphere-NEvTTHEY-py3.10 in /root/.cache/pypoetry/virtualenvs
+   24  Installing dependencies from lock file
+   25  Package operations: 89 installs, 1 update, 0 removals
+   26  Installing the current project: atmosphere (1.10.4.post186.dev0+779cb921)
+   27  route -n
+   28  ip route | grep default
+   29  sudo ip route add 172.24.0.0/16 via 172.25.0.1
+   30  cd ~
+   31  cat /etc/netplan
+   32  cat /etc/network/intefaces
+   33  cd /etc/network/interfaces
+   34  cd ~/etc
+   35  cd etc
+   36  cd /etc
+   37  ll
+   38  cd netplan/
+   39  ll
+   40  cat 00-installer-config.yaml 
+   41  cd ~
+   42  cd /etc/netplan/
+   43  ll
+   44  cd ..
+   45  ll
+   46  cd network
+   47  ll
+   48  cd if-up.d/
+   49  ll
+   50  cat ethtool 
+   51  cd ~
+   52  cd /etc/netplan/
+   53  l
+   54  ll
+   55  cat 00-installer-config.yaml 
+   56  route -n
+   57  ll
+   58  sudo vi 00-installer-config.yaml 
+   59  sudo netplan apply
+   60  sudo vi/etc/systcl.conf
+   61  cd ~
+   62  sudo vi /etc/sysctl.conf
+   63  sudo iptables -t nat -A POSTROUTING -s 172.24.0.0/16 -o ens3 -j MASQUERADE
+   64  sudo apt-get install iptables-persistent
+   65  sudo netfilter-persistent save
+   66  cd ~
+   67  cd atmosphere/
+   68  sudo poetry run molecule converge -s aio
+   69  kubectl
+   70  kubectl get pods
+   71  kubectl get nodes
+   72  ll
+   73  cd ..
+   74  ll
+   75  source /root/openrc
+   76  sudo source /root/openrc
+   77  cd ~/root
+   78  sudo cd /root
+   79  sudo passwd root
+   80  sudo source ~/root/openrc
+   81  source
+   82  source /root/openrc
+   83  cd /root
+   84  ll
+   85  sudo apt install git -y
+   86  git clone https://github.com/again1247/atmosphere_test01.git
+   87  cp terminal_output.txt ~/atmosphere_test01/
+   88  git config --global user.email "euiri1247@gmail.com"
+   89  git config --global user.name "hailey"
+   90  cd atmosphere_test01/
+   91  ll
+   92  cp terminal_output terminal_output_success.txt
+   93  cd ..
+   94  cp terminal_output.txt ~/atmosphere_test01/terminao_success.txt
+   95  cd atmosphere_test01/
+   96  ll
+   97  rm -f terminal_output.txt
+   98  ll
+   99  git add terminao_success.txt
+  100  git commit -m "ADD terminal_success_result.txt"
+  101  git remote set-url origin https://again1247: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@github.com/again1247/atmosphere_test01.git
+  102  git branch -M main
+  103  git push -u origin main
+  104  history > history.txt
